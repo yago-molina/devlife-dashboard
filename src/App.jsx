@@ -43,13 +43,19 @@ function App() {
   }
 
   function alternarConcluida(id) {
-    const tarefa = tarefa.find((t) => t.id === id);
-    const setConcluir = !tarefa.concluida;
+    const tarefa = tarefas.find((t) => t.id === id);
+    const vaiConcluir = !tarefa.concluida;
     const status = vaiConcluir ? "concluida" : "pendente";
+
     setTarefas((atual) =>
-      atual.map((t) => (t.id === id ? { ...t, concluida: !t.concluida } : t))
+      atual.map((t) =>
+        t.id === id
+          ? { ...t, concluida: !t.concluida }
+          : t
+      )
     );
-    setAnuncio(`Tarefa "${tarefa.titulo}" marcado como ${status}`)
+
+    setAnuncio(`Tarefa "${tarefa.titulo}" marcada como ${status}`);
   }
 
   function removerTarefa(id) {
