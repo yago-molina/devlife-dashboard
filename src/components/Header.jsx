@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <header className="bg-slate-900 text-white px-8 py-4 flex items-center justify-between">
-      <h1 className="text-2xl font-bold">
+      <h1 className="text-2xl font-bold font-display">
         DevLife <span className="text-emerald-400">Dashboard</span>
       </h1>
 
