@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import TaskCard from "./components/TaskCard";
 import TaskForm from "./components/TaskForm";
+import StatusRede from "./components/StatusRede";
+import InstallPrompt from "./components/InstallPrompt";
 
 const TAREFAS_INICIAIS = [
   { id: 1, titulo: "Estudar componentes do React", categoria: "Estudos", prioridade: "alta", concluida: false },
@@ -76,6 +78,8 @@ function App() {
         href="#conteudo"
         className={"sr-only focus:not-st-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-slate-500 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg"} />
       <Header />
+      <InstallPrompt />
+      <StatusRede />
 
       <div aria-live="polite" role="status" className="sr-only">
         {anuncio}
